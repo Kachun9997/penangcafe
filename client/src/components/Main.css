@@ -1,0 +1,18 @@
+.w3-margin {
+    background-position: center;
+}
+
+
+.w3-text-white{
+  font-size:90px;
+}
+
+.w3-margin {
+    background-position: center;
+    background-size: cover;
+    min-height: 75%;
+}
+
+.w3-content {
+    max-width: 700px;
+}

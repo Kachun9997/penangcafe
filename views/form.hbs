@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>Search Nearby Cafe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url('cafe.jpg');
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
+<body>
+
+{{>navbar}}
+
+
+
+<!-- Header with image -->
+
+<header class="bgimg w3-display-container w3-grayscale-min" id="form">
+
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">For Searching places of Interest</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-black" style="font-size:90px">Search Places</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-black">15 Adr street, 5015</span>
+  </div>
+</header>
+
+
+
+<div class="w3-row w3-center w3-card w3-padding text-center">
+    <div class="col-sm-12">
+      <form id="form" action="/" method="post">
+        <div class="form-group">
+          <label for="addr"> Enter address :</label>
+          <input id="addr" name="address" class="form-control" type="text" placeholder="Enter Adress....."/>
+          <p> </p>
+          <label for="name"> Enter name :</label>
+          <input id="name" name="name" class="form-control" type="text" placeholder="Enter Name....."/>
+          <p> </p>
+          <label for="places-type"> Select type of place: </label>
+          <p> </p>
+          <select id="place-type" name="placetype" class="form-control">
+          {{> scrollablelist}}
+          </select>
+          <p> </p>
+          <input type="submit"  value="Send" formaction="/getplaces"/>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
